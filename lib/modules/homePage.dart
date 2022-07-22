@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:scan_and_go/shared/styles/colors.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -11,49 +13,75 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF332C83),
+      backgroundColor: sPrimary(),
       appBar: AppBar(
-        backgroundColor: Color(0xFF332C83),
+        backgroundColor: sPrimary(),
         elevation: 0,
-        leading: Icon(Icons.info_outline),
+        leading: IconButton(
+          onPressed: (){},
+          icon: Icon(Icons.info_outline),),
         title: Text('How it works'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text('Hi, User.',
-              style: TextStyle(color: Colors.white),),
-          Text('Welcome to Scan&Go',
-            style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.white,
+                  fontWeight: FontWeight.bold),),
+          Text('Welcome to Scan&Go,',
+            style: TextStyle(color: Colors.white,
+                fontWeight: FontWeight.bold),
+
           ),
           Text('The fastest way to shop',
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.white,
+              fontWeight: FontWeight.bold
+            ),
           ),
           Image(
-              image: NetworkImage('https://drive.google.com/file/d/1-Xf1kBILBP6w9enx-jVlcDURG4MSCUX0/view?usp=sharing'),
-            height: 50,
-            width: 50,
+              image: AssetImage('assets/images/undraw_shopping_app_flsj-removebg-preview.png'),
+            width: 280,
+            height: 280,
           ),
 
-          Center(
-            child: Padding(
-              padding: const EdgeInsets.only(top: 250),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 4.0),
+            child: Center(
               child: SizedBox(
-                height: 130,
-                width: 130,
-                child: ElevatedButton(onPressed: (){},
-                    style: ElevatedButton.styleFrom(
-                      shape: CircleBorder(),
-                      primary: Colors.red,
-                    ),
-                    child: Text(
-                      'Scan',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20
+                height: 160,
+                width: 160,
+                child: Stack(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          style: BorderStyle.solid,
+                          color: Colors.white,
+                        ),
+                        borderRadius: BorderRadius.circular(80)
                       ),
-                    )
+                    ),
+                    Center(
+                      child: SizedBox(
+                        height: 130,
+                        width: 130,
+                        child: ElevatedButton(onPressed: (){},
+                            style: ElevatedButton.styleFrom(
+                              shape: CircleBorder(),
+                              primary: Colors.red,
+                            ),
+                            child: Text(
+                              'Scan',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20
+                              ),
+                            )
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
