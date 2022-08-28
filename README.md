@@ -1,16 +1,6 @@
 # scan_and_go
 
-A new Flutter project.
+This ia a Self Checkout app, where the user visits the grocery store and scans the barcode of any item they would like to buy, the items 
+are then added to his cart and he can self checkout buy scanning a QR code at the chashier. 
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This app is not finished yet.
